@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="shortcut icon"
+    href="https://cdn-icons-png.freepik.com/256/8476/8476658.png?semt=ais_hybrid"
+    type="image/x-icon"
+  />
+    <title> Income and Expense Calculator </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1 style="color:rgb(9, 44, 170);">
+           <i>
+            Income and Expense Calculator
+           </i>
+          </h1> <br>
+    </div>
+    <div class="summary">
+        <div>
+            <h1>&#10004; Balance:$ 
+                <span id="updatedBal">
+                      
+                  </span>
+            </h1>
+        </div>
+        <br />
+        <div class="total">
+            <div>
+                <b><i><h2>Total Income:$</h2></i> </b>
+                <div>
+                    <h2 style="color: rgb(10, 1, 1);"
+                        id="updatedInc">
+                        0
+                    </h2>
+                </div>
+            </div>
+            <hr class="verticle" />
+            <div>
+               <b> <i><h2>Total Expenses:$</h2></i> </b>
+                <div>
+                    <h2 style="color: rgb(10, 1, 1);" 
+                        id="updatedExp">
+                        0
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <label>
+            <input type="radio" name="filter" value="all" checked> <b>All</b>
+        </label>
+        <label>
+            <input type="radio" name="filter" value="income"> <b>Income</b>
+        </label>
+        <label>
+            <input type="radio" name="filter" value="expense"> <b>Expense</b>
+        </label>
+    </div>
+        <div class="entries-section">
+            <ul id="entries-list">
+                
+            </ul>
+        </div>
+    <div class="root">
+        <div id="items">
+            <h2>Expenses</h2>
+            <table id="table">
+                <tr class="titles">
+                    <th>S.no.</th>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Description</th>
+                    <th>Type</th>
+                    <th>Delete</th>
+                    <th>Edit</th>
+                </tr>
+            </table>
+        </div>
+        <hr class="vertical" />
+        <div id="new">
+            <h2>Add new</h2>
+
+            <div class="inputs">
+                <div class="inputitem">
+                    <p style="width: 9rem">
+                        Entry type:
+                    </p>
+                    <select id='itemType'>
+                        <option value="0">Expense</option>
+                        <option value="1">Income</option>
+                    </select>
+                </div>
+                <div class="inputitem">
+                    <p style="width: 9rem">Name:</p>
+                    <input id="name" 
+                           type="text"
+                           value="" 
+                           placeholder="name" />
+                </div>
+                <div class="inputitem">
+                    <p style="width: 9rem">Description:</p>
+                    <input 
+                               id="description" 
+                               type="text" 
+                               placeholder="description" />
+                            </div>
+                <div class="inputitem">
+                    <p style="width: 9rem">Amount:</p>
+                    <input value="0" 
+                           id="amount"
+                           name="mod" 
+                           type="number" 
+                           placeholder="amount" />
+                </div>
+                
+               
+            </div>
+            <button onclick="addItem()" >
+                Add Entry
+            </button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
